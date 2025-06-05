@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro - UEIS</title>
+  <style>
+    body {
+      background-color: #0B2454;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .registro {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 10px;
+      width: 300px;
+    }
+    input, button {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #8DA9C4;
+      color: #0B2454;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="registro">
+    <h2>Crear cuenta</h2>
+    <input type="text" id="nombre" placeholder="Nombre completo" required>
+    <input type="text" id="usuario" placeholder="Nombre de usuario" required>
+    <input type="password" id="contraseña" placeholder="Contraseña" required>
+    <button onclick="registrar()">Registrar</button>
+  </div>
+
+  <script>
+    function registrar() {
+      const nombre = document.getElementById("nombre").value;
+      const usuario = document.getElementById("usuario").value;
+      const contraseña = document.getElementById("contraseña").value;
+
+      if (nombre && usuario && contraseña) {
+        localStorage.setItem("nombre", nombre);
+        localStorage.setItem("usuario", usuario);
+        localStorage.setItem("contraseña", contraseña);
+        alert("Registro exitoso. Ahora puedes iniciar sesión.");
+        window.location.href = "login.html";
+
+      } else {
+        alert("Completa todos los campos.");
+      }
+    }
+  </script>
+</body>
+</html>

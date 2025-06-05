@@ -1,0 +1,84 @@
+:root {
+    --Azul: #134074;
+    --Azuloscuro: #0B2454;
+    --Azulgris: #8DA9C4;
+    --Blanco: #fff;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("style/Imagenes.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: var(--Blanco);
+}
+
+/* Navegación */
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: var(--Azuloscuro);
+    padding: 10px 0;
+    margin: 0;
+}
+
+.menu li {
+    margin: 0 20px;
+}
+
+.menu a {
+    color: var(--Blanco);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Redes sociales */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+/* Formulario */
+.login-container {
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(19, 64, 116, 0.7);
+    margin: 50px auto;
+    width: 300px;
+    border-radius: 15px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-form button {
+    padding: 10px;
+    background-color: var(--Azulgris);
+    color: var(--Azuloscuro);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: var(--Blanco);
+}
